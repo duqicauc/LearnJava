@@ -1,4 +1,4 @@
-package org.java.learn.java8.dispatcher;
+package org.java.learn.pattern.dispatcher;
 
 /**
  * Created by IntelliJ IDEA.

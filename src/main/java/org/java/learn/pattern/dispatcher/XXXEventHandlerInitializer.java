@@ -1,4 +1,4 @@
-package org.java.learn.java8.dispatcher;
+package org.java.learn.pattern.dispatcher;
 
 import org.springframework.stereotype.Component;
 
