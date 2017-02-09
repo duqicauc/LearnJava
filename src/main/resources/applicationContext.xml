@@ -7,5 +7,6 @@
     <context:component-scan base-package="org.java.learn"/>
 
     <bean id="httpClientFactoryBean" class="org.java.learn.httpclient.HttpClientFactoryBean"/>
-    <!--<bean id="httpClient" factory-bean="httpClientFactoryBean"/>-->
+
+    <bean id="asyncHttpClientFactoryBean" class="org.java.learn.httpclient.AsyncHttpClientFactoryBean"/>
 </beans>
