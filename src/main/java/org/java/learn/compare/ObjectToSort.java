@@ -32,6 +32,8 @@ public class ObjectToSort implements Comparable<ObjectToSort> {
     }
 
     public int compareTo(ObjectToSort o) {
-        return Long.valueOf(this.updateTime).compareTo(o.updateTime); //逆序，从大到小
+        return Long.valueOf(this.updateTime).compareTo(o.updateTime);
+        //long类型使用compareTo方法比较
+        //假设A为调用者，B为参数【被比较者】：（1）A和B相等，返回0；（2）A小于B，返回负数；（3）A>B返回正数
     }
 }

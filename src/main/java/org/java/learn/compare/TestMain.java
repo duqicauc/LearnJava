@@ -13,6 +13,7 @@ import java.util.List;
 public class TestMain {
 
     public static void main(String[] args) {
+
         List<ObjectToSort> list = new ArrayList();
         list.add(new ObjectToSort(100, "duqi"));
         list.add(new ObjectToSort(200, "test"));
@@ -23,7 +24,7 @@ public class TestMain {
             System.out.println(aList.getName());
         }
         System.out.println("________+++++++++++++");
-        Collections.sort(list, Collections.<ObjectToSort>reverseOrder());
+        Collections.sort(list);
         for (ObjectToSort aList : list) {
             System.out.println(aList.getName());
         }
