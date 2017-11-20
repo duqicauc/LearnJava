@@ -1,5 +1,7 @@
 package org.java.learn.generics;
 
+import org.apache.commons.lang3.RandomUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -14,22 +16,24 @@ public class RandomList<T> {
 
     private ArrayList<T> storage = new ArrayList<>();
 
-    private Random random = new Random(47);
+//    private Random random = new Random(47);
 
     public void add(T item) {
         storage.add(item);
     }
     public T select() {
-        return storage.get(random.nextInt(storage.size()));
+//        return storage.get(random.nextInt(storage.size()));
+        return storage.get(RandomUtils.nextInt(0, storage.size()));
     }
 
     public static void main(String[] args) {
         RandomList<String> randomList = new RandomList<>();
-        for (String s: "The queick brown for jumped over the lazy brown dog".split(" ")) {
+        for (String s: "永和大王 拌川王 外卖 五芳斋 牛肉粉 煲仔饭 KFC 麦当劳 小二面馆 杭味面馆".split(" ")) {
             randomList.add(s);
         }
-        for (int i = 0; i < 11; i++) {
-            System.out.print(randomList.select() + " ");
-        }
+//        for (int i = 0; i < 11; i++) {
+//            System.out.print(randomList.select() + " ");
+//        }
+        System.out.println(randomList.select());
     }
 }
