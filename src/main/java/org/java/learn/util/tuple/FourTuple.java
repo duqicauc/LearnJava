@@ -1,4 +1,4 @@
-package org.java.learn.util;
+package org.java.learn.util.tuple;
 
 /**
  * 作用: User: duqi Date: 2017/11/19 Time: 16:36
