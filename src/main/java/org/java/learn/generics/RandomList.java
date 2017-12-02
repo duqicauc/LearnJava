@@ -28,7 +28,7 @@ public class RandomList<T> {
 
     public static void main(String[] args) {
         RandomList<String> randomList = new RandomList<>();
-        for (String s: "永和大王 拌川王 外卖 五芳斋 牛肉粉 煲仔饭 KFC 麦当劳 小二面馆 杭味面馆".split(" ")) {
+        for (String s: "永和大王 拌川王 五芳斋 煲仔饭 杭味面馆 麻辣烫".split(" ")) {
             randomList.add(s);
         }
 //        for (int i = 0; i < 11; i++) {
