@@ -14,26 +14,22 @@ import java.util.Random;
  */
 public class RandomList<T> {
 
-    private ArrayList<T> storage = new ArrayList<>();
-
-//    private Random random = new Random(47);
+    private List<T> storage = new ArrayList<>();
 
     public void add(T item) {
         storage.add(item);
     }
     public T select() {
-//        return storage.get(random.nextInt(storage.size()));
         return storage.get(RandomUtils.nextInt(0, storage.size()));
     }
 
     public static void main(String[] args) {
-        RandomList<String> randomList = new RandomList<>();
+        RandomList<String> randomStrings = new RandomList<>();
         for (String s: "永和大王 拌川王 五芳斋 煲仔饭 杭味面馆 麻辣烫".split(" ")) {
-            randomList.add(s);
+            randomStrings.add(s);
         }
-//        for (int i = 0; i < 11; i++) {
-//            System.out.print(randomList.select() + " ");
-//        }
-        System.out.println(randomList.select());
+        for (int i = 0; i < randomStrings.storage.size(); i++) {
+            System.out.print(randomStrings.select() + " ");
+        }
     }
 }
