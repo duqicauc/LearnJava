@@ -19,6 +19,9 @@ public class SkipList<T extends Comparable<? super T>> {
     }
 
     public void insert(T value) {
+        // 决定新节点所在的层次。生成一个随机数item。
+        // 在遇到第一个0之前的1的个数就是这个节点所在的层次里的最高层次
+        // 因为是32位机器，因此最高的层次是32。
         int level = 0;
         for (int item = RandomUtils.nextInt(0, 33); (item & 1) == 1; item >>= 1) {
             level++;
@@ -28,6 +31,7 @@ public class SkipList<T extends Comparable<? super T>> {
             }
         }
 
+        //将新节点插入skip list（从上到下）
         SkipNode newNode = new SkipNode(value, level + 1);
         SkipNode cur = head;
         for (int i = levels - 1; i >= 0; i--) {
