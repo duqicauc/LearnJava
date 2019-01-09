@@ -1,4 +1,4 @@
-package org.java.learn.concurrent;
+package org.java.learn.concurrent.threadlocal;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -47,3 +47,4 @@ public class ThreadId {
         }
     }
 }
+

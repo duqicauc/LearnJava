@@ -1,4 +1,4 @@
-package org.java.learn.concurrent;
+package org.java.learn.concurrent.threadlocal;
 
 
 /**
