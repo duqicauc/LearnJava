@@ -1,4 +1,4 @@
-package org.java.learn;
+package org.java.learn.json;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
