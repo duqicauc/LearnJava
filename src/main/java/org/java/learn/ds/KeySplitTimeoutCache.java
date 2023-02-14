@@ -1,12 +1,13 @@
 package org.java.learn.ds;
 
-import org.jetbrains.annotations.NotNull;
 import org.springframework.util.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
-import java.util.concurrent.*;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -130,7 +131,7 @@ public class KeySplitTimeoutCache<T> {
         }
 
         @Override
-        public int compareTo(@NotNull Node o) {
+        public int compareTo(Node o) {
             long r = this.expireTime - o.expireTime;
             if (r < 0) {
                 return -1;
